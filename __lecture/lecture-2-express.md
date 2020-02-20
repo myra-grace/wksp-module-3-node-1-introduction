@@ -30,6 +30,21 @@ app.listen(4000);
 
 _Let's create a server right now!_
 
+const express = require('express');
+
+const app = express();
+
+const handleHello = (req, res) => {
+    res.send('hello');
+}
+
+app.get('/', handleHello);
+app.get('/bacon', (req, res) => {
+    res.send('YUM');
+});
+
+app.listen(4000);
+
 ---
 
 Let's explore the workshop repository together.
